@@ -6,8 +6,8 @@ module.exports = {
         Tournament.create({
             teams: args.teams
         }, function (err, tournament) {
-            if (err) return handleError(err);
-            return tournament
+            if (err) {return handleError(err);} else {
+            return tournament;}
         });
     } catch (err) {
         console.log(err)
