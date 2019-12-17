@@ -23,3 +23,5 @@ const tournamentSchema = new Schema(
     }
 
 );
+
+module.exports = mongoose.model("tournament", tournamentSchema);

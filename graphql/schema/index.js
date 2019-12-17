@@ -9,7 +9,6 @@ module.exports = buildSchema(`
         name: String!
     }
 
-    
     type Game {
         home: Team!
         away: Team!
@@ -23,6 +22,7 @@ module.exports = buildSchema(`
     type Queries {
         test: String!
         getTournament(id: String!): Tournament!
+        createTournament(games: [Game!]!): String!
     }
 
     type Mutations {

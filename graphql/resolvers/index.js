@@ -3,10 +3,13 @@
 
 // EXAMPLE:
 const testResolver = require('./test');
+const getTournament = require('./getTournament')
+const createTournament = require('./createTournament')
 
-const rootResolver = {
-  ...testResolver
-
+const resolvers = {
+  ...testResolver,
+  ...getTournament,
+  ...createTournament
 };
 
-module.exports = rootResolver;
+module.exports = resolvers;
