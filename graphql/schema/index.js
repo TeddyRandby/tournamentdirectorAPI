@@ -14,21 +14,17 @@ module.exports = buildSchema(`
         away: Team!
     }
 
-    input GameMutation {
-        team: Team!
-    }
-
-    input Tournament {
-        id: String!
-        games: [Game!]!
-    }
-
     type rootQuery {
         test: String!
     }
 
+    type rootMutation {
+
+    }
+
     schema {
         query: rootQuery
+        mutation: rootMutation
     }
 
 
