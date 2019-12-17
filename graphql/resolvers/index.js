@@ -2,13 +2,11 @@
 
 
 // EXAMPLE:
-// const poeppelmanResolver = require('./poeppelman');
-// const testResolver = require('./test');
+const testResolver = require('./test');
 
-// const rootResolver = {
-//   ...poeppelmanResolver,
-//   ...testResolver
+const rootResolver = {
+  ...testResolver
 
-// };
+};
 
-// module.exports = rootResolver;
+module.exports = rootResolver;
