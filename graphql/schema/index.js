@@ -22,10 +22,12 @@ module.exports = buildSchema(`
 
     type Queries {
         test: String!
+        getTournament(id: String!): Tournament!
     }
 
     type Mutations {
         test: String!
+        updateScore(id: String!, score: Int!): Game!
     }
    
     schema {
