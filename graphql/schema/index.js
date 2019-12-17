@@ -9,23 +9,28 @@ module.exports = buildSchema(`
         name: String!
     }
 
+    
     type Game {
         home: Team!
         away: Team!
     }
 
-    type rootQuery {
+    type Tournament {
+        id: String!
+        games: [Game!]!
+    }
+
+    type Queries {
         test: String!
     }
 
-    type rootMutation {
+    type Mutations {
         test: String!
     }
-
+   
     schema {
-        query: rootQuery
-        mutation: rootMutation
+        query: Queries
+        mutation: Mutations
     }
-
 
 `);
