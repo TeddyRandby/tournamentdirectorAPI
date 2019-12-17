@@ -3,35 +3,54 @@ const { buildSchema } = require("graphql");
 
 module.exports = buildSchema(`
 
-    interface Team {
+    input TeamIn {
         id: String!
         score: Int!
         name: String!
     }
 
-    interface Game {
-        home: Team!
-        away: Team!
-    }
-
-    interface Tournament {
+    input TeamOut {
         id: String!
-        games: [Game!]!
+        score: Int!
+        name: String!
     }
 
-    input Games{
-        games: [Game!]!
+    input GameIn {
+        home: TeamIn!
+        away: TeamIn!
+    }
+
+    input GameOut {
+        home: TeamOut!
+        away: TeamOut!
+    }
+
+    input TournamentIn {
+        id: String!
+        games: [GameIn!]!
+    }
+
+    type TournamentOut {
+        id: String!
+        games: [GameOut!]!
+    }
+
+    input GamesIn{
+        games: [GameIn!]!
+    }
+
+    type GamesOut{
+        games: [GameOut!]!
     }
 
     type Queries {
         test: String!
-        getTournament(id: String!): Tournament!
+        getTournament(id: String!): TournamentOut!
     }
 
     type Mutations {
-        test: String!
-        updateScore(id: String!, score: Int!): Game!
-        createTournament(games: Games!): String!
+        updateScore(id: String!, score: Int!): GameOut!
+        createTournament(games: GamesIn!): String!
 
     }
    
