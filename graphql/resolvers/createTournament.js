@@ -4,7 +4,7 @@ module.exports = {
   getTournament: async args => {
     try {
         Tournament.create({
-            games: args.games
+            teams: args.teams
         }, function (err, tournament) {
             if (err) return handleError(err);
             return "Success"
@@ -13,7 +13,5 @@ module.exports = {
         console.log(err)
         throw err;
     }
-
-
   }
 };
