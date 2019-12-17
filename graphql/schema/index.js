@@ -20,7 +20,7 @@ module.exports = buildSchema(`
     }
 
     type TournamentOut {
-        id: String!
+        _id: String!
         teams: [TeamOut!]!
     }
 
