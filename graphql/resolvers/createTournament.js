@@ -7,7 +7,7 @@ module.exports = {
             teams: args.teams
         }, function (err, tournament) {
             if (err) return handleError(err);
-            return "Success"
+            return tournament
         });
     } catch (err) {
         console.log(err)
