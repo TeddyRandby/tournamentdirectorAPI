@@ -5,7 +5,7 @@ module.exports = buildSchema(`
 
     type Team {
         id: String!
-        score: Number!
+        score: Int!
         name: String!
     }
 
@@ -19,7 +19,7 @@ module.exports = buildSchema(`
     }
 
     input Tournament {
-        id: Number!
+        id: String!
         games: [Game!]!
     }
 
