@@ -19,7 +19,7 @@ module.exports = buildSchema(`
     }
 
     type rootMutation {
-
+        test: String!
     }
 
     schema {
