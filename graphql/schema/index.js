@@ -3,18 +3,18 @@ const { buildSchema } = require("graphql");
 
 module.exports = buildSchema(`
 
-    type Team {
+    interface Team {
         id: String!
         score: Int!
         name: String!
     }
 
-    type Game {
+    interface Game {
         home: Team!
         away: Team!
     }
 
-    type Tournament {
+    interface Tournament {
         id: String!
         games: [Game!]!
     }
@@ -26,12 +26,13 @@ module.exports = buildSchema(`
     type Queries {
         test: String!
         getTournament(id: String!): Tournament!
-        createTournament(games: Games!): String!
     }
 
     type Mutations {
         test: String!
         updateScore(id: String!, score: Int!): Game!
+        createTournament(games: Games!): String!
+
     }
    
     schema {
