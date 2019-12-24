@@ -9,6 +9,7 @@ module.exports = {
                 if ( team._id === args.team_id ) {
                     team.score = args.score;
                     data = team;
+                    console.log(team);
                 }
             })
             await Tournament.findByIdAndUpdate(args._id, {teams: teams}, {useFindAndModify: false}) 
