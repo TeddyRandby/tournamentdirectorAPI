@@ -6,7 +6,6 @@ module.exports = {
       const data = await Tournament.create({
         teams: args.teams.teams
       });
-      console.log(data);
       return data;
     } catch (err) {
       console.log(err);
