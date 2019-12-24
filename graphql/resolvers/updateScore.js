@@ -8,9 +8,7 @@ module.exports = {
             teams.forEach( team => {
 
                 if ( team._id == args.team_id ) {
-                    console.log(team);
                     team.score = args.score;
-                    console.log(team);
                     data = team;
                 }
             })
