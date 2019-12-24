@@ -3,9 +3,9 @@ const Tournament = require("../models/tournament");
 module.exports = {
   createTournament: async args => {
     try {
-        console.log(...args.teams.teams)
+      var teams = args.teams.reduce((obj, item) => (obj[item.name] = item, obj) ,{});
       const data = await Tournament.create({
-        ...args.teams.teams
+        teams: teams
       });
       console.log(data);
       return data;
