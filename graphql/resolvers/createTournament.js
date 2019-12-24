@@ -7,7 +7,7 @@ module.exports = {
         teams: args.teams.teams
       });
       console.log(data);
-      return data._id;
+      return data;
     } catch (err) {
       console.log(err);
       throw err;
