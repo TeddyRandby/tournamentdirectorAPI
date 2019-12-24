@@ -4,11 +4,13 @@
 const testResolver = require('./test');
 const getTournament = require('./getTournament')
 const createTournament = require('./createTournament')
+const updateScore = require('./updateScore')
 
 const resolvers = {
   ...testResolver,
   ...getTournament,
-  ...createTournament
+  ...createTournament,
+  ...updateScore
 };
 
 module.exports = resolvers;

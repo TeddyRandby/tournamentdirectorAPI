@@ -4,7 +4,7 @@ module.exports = {
   createTournament: async args => {
     try {
       const data = await Tournament.create({
-        teams: args.teams.teams
+        ...args.teams.teams
       });
       console.log(data);
       return data;
