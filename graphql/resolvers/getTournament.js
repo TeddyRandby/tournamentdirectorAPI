@@ -5,7 +5,7 @@ getTournament: async args => {
     try {
         console.log(args);
         const tournament = await Tournament.find({
-            id: args._id
+            _id: args._id
         })
         return tournament;
     } catch (err) {
