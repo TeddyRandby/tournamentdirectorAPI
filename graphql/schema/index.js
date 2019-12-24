@@ -6,6 +6,7 @@ module.exports = buildSchema(`
     input TeamIn {
         score: Int!
         name: String!
+        opponent: String!
     }
 
     type TeamOut {
