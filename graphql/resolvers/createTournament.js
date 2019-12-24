@@ -14,6 +14,7 @@ module.exports = {
             return handleError(err);
           } else {
             newTournament = tournament;
+            console.log(newTournament);
           }
         }
       );
