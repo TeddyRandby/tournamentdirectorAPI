@@ -13,11 +13,11 @@ module.exports = {
             console.log(err);
             return handleError(err);
           } else {
-            console.log(tournament);
             newTournament = tournament;
           }
         }
       );
+      console.log(newTournament);
       return newTournament;
     } catch (err) {
       console.log(err);
