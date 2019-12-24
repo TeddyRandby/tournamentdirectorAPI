@@ -4,13 +4,11 @@ const { buildSchema } = require("graphql");
 module.exports = buildSchema(`
 
     input TeamIn {
-        id: String!
         score: Int!
         name: String!
     }
 
     type TeamOut {
-        id: String!
         score: Int!
         name: String!
     }
