@@ -12,7 +12,7 @@ module.exports = buildSchema(`
         _id: String!
         score: Int!
         name: String!
-        opponenent: String!
+        opponent: String!
     }
 
     input TournamentIn {
