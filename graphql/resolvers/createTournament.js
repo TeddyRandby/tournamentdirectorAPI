@@ -2,7 +2,7 @@ const Tournament = require("../models/tournament");
 
 module.exports = {
   createTournament: async args => {
-      console.log(args.teams);
+      console.log("create tournament");
     try {
         console.log("here")
         Tournament.create({
