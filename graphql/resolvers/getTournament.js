@@ -3,10 +3,8 @@ const Tournament = require("../models/tournament");
 module.exports = {
 getTournament: async args => {
     try {
-        console.log(args);
-        const tournament = await Tournament.find({
-            _id: args._id
-        })
+        const tournament = await Tournament.findById(args._id)
+        console.log(tournament)
         return tournament;
     } catch (err) {
         console.log(err);
