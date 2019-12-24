@@ -6,7 +6,6 @@ const tournamentSchema = new Schema({
   name: String,
   teams: [
     {
-      _id: String,
       score: Number,
       name: String
     }
