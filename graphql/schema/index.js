@@ -16,7 +16,7 @@ module.exports = buildSchema(`
     }
 
     input TournamentIn {
-        games: [TeamIn!]!
+        teams: [TeamIn!]!
     }
 
     type TournamentOut {
