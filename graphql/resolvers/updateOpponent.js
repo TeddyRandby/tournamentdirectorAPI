@@ -8,7 +8,7 @@ module.exports = {
             teams.forEach( team => {
                 if ( team._id == args.team_id ) {
                     console.log(team);
-                    team.opponent = args.opponent;
+                    team.opponent = args.opp_id;
                     console.log(team);
                     data = team;
                 }
