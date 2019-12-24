@@ -12,6 +12,7 @@ module.exports = buildSchema(`
         _id: String!
         score: Int!
         name: String!
+        opponenent: String!
     }
 
     input TournamentIn {
@@ -31,7 +32,7 @@ module.exports = buildSchema(`
     type Mutations {
         updateScore(_id: String!, team_id: String!, score: Int!): TeamOut!
         createTournament(teams: TournamentIn!): TournamentOut!
-
+        updateOpponent(_id: String!): TeamOut!
     }
    
     schema {
