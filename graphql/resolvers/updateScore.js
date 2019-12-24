@@ -12,6 +12,7 @@ module.exports = {
                 }
             })
             await Tournament.findByIdAndUpdate(args._id, {teams: teams}, {useFindAndModify: false}) 
+            console.log(data);
             return data;
         } catch(err) {
             console.log(err);
