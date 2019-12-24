@@ -12,7 +12,7 @@ module.exports = {
             console.log(err);
             return handleError(err);
           } else {
-            console.log("returning");
+            console.log(tournament);
             return tournament;
           }
         }
