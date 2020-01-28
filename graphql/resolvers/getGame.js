@@ -1,7 +1,7 @@
 const Tournament = require("../models/tournament");
 
 module.exports = {
-    updateScore: async args => {
+    getGame: async args => {
         try {
             let data = {};
             const {id, teams} = await Tournament.find({teams:{"$elemMatch": {"id":args.team_id}}});
