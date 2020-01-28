@@ -4,7 +4,7 @@ module.exports = {
     getGame: async args => {
         try {
             let data = {};
-            const {teams} = await Tournament.find({"teams":{"$elemMatch": {"name": "ego"}}});
+            const {id,teams} = await Tournament.find({ "teams.name": "ego"});
             console.log(teams);
             teams.forEach( team => {
                 if ( team._id == args.team_id ) {
