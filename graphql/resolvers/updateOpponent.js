@@ -4,7 +4,7 @@ module.exports = {
     updateOpponent: async args => {
         try {
             let data = {};
-            const {id, teams} = await Tournament.findById(args._id);
+            const {id, teams} = await Tournament.find(args._id);
             teams.forEach( team => {
                 if ( team._id == args.team_id ) {
                     team.opponent = args.opp_id;

@@ -4,8 +4,19 @@ module.exports = {
     updateScore: async args => {
         try {
             let data = {};
-            const {id, team} = await Tournament.findById(args._id);
-            console.log(team);
+            const {id, teams} = await Tournament.find({teams:{"$elemMatch": {"id":args.team_id}}});
+            console.log(teams);
+            teams.forEach( team => {
+                if ( team._id == args.team_id ) {
+                    data.home = team;
+                }
+            })
+            teams.forEach(team => {
+                if( team._id == data.home.opponent){
+                    data.away = team
+                }
+            })
+            console.log(data);
             return data;
         } catch(err) {
             console.log(err);
