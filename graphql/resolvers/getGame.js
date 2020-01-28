@@ -4,10 +4,21 @@ module.exports = {
     getGame: async args => {
         try {
             let data = {};
-            console.log(args.team_id)
             const {id,teams} = await Tournament.find().where("teams").elemMatch({ name: "ego"});
-            console.log(id);
             console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+            console.log(teams);
+
             teams.forEach( team => {
                 if ( team._id == args.team_id ) {
                     data.home = team;
