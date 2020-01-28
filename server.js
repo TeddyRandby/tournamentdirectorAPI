@@ -30,3 +30,5 @@ app.use('/api', graphqlHttp({
   .catch( err => {
     console.log(err);
   });
+
+  mongoose.set('debug',true)
