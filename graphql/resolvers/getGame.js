@@ -5,7 +5,7 @@ module.exports = {
         try {
             let data = {};
             console.log(args.team_id)
-            const {id,teams} = await Tournament.find({"teams.name":"ego"});
+            const {id,teams} = await Tournament.find().where("teams").elemMatch({ name: "ego"});
             console.log(id);
             console.log(teams);
             teams.forEach( team => {
