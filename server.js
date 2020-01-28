@@ -31,6 +31,6 @@ app.use('/api', graphqlHttp({
     console.log(err);
   });
 
-  mongoose.set("debug", (collectionName, method, query, doc) => {
-    console.log(`${collectionName}.${method}`, JSON.stringify(query), doc);
-});
+//   mongoose.set("debug", (collectionName, method, query, doc) => {
+//     console.log(`${collectionName}.${method}`, JSON.stringify(query), doc);
+// });
