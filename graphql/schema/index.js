@@ -23,11 +23,13 @@ module.exports = buildSchema(`
     }
 
     input TournamentIn {
+        name: String!
         teams: [TeamIn!]!
     }
 
     type TournamentOut {
         _id: String!
+        name: String!
         teams: [TeamOut!]!
     }
 
