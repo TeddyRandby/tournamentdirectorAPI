@@ -4,7 +4,7 @@ module.exports = {
     updateScore: async args => {
         try {
             let data = {};
-            const {id, teams} = await Tournament.findById(args._id);
+            const {id, teams} = await Tournament.findOne().where("teams").elemMatch({ _id: args.team_id});
             teams.forEach( team => {
 
                 if ( team._id == args.team_id ) {
@@ -12,7 +12,7 @@ module.exports = {
                     data = team;
                 }
             })
-            await Tournament.findByIdAndUpdate(args._id, {teams: teams}, {useFindAndModify: false}) 
+            await Tournament.findOne({teams:teams}, {useFindAndModify:false}).where("teams").elemMatch({ _id: args.team_id}) 
             return data;
         } catch(err) {
             console.log(err);
