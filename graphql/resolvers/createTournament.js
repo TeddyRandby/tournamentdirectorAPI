@@ -4,8 +4,8 @@ module.exports = {
   createTournament: async args => {
     try {
       const data = await Tournament.create({
-        name: args.name,
-        teams: args.teams.teams
+        name: args.tournament.name,
+        teams: args.tournament.teams
       });
       return data;
     } catch (err) {
