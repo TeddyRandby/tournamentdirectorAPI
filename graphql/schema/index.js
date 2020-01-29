@@ -17,6 +17,7 @@ module.exports = buildSchema(`
     }
 
     type GameOut {
+        name: String!
         home: TeamOut!
         away: TeamOut!
     }
