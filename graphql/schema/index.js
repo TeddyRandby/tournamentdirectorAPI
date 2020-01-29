@@ -37,6 +37,7 @@ module.exports = buildSchema(`
         test: String!
         getTournament(_id: String!): TournamentOut!
         getGame(team_id: String!): GameOut!
+        getTournamentName(name: String!): TournamentOut!
     }
 
     type Mutations {

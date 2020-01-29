@@ -7,6 +7,7 @@ const createTournament = require('./createTournament')
 const updateScore = require('./updateScore')
 const updateOppoonent = require('./updateOpponent')
 const getGame = require('./getGame')
+const getTournamentName = require('./getTournamentName')
 
 const resolvers = {
   ...testResolver,
@@ -14,7 +15,8 @@ const resolvers = {
   ...createTournament,
   ...updateScore,
   ...updateOppoonent,
-  ...getGame
+  ...getGame,
+  ...getTournamentName
 };
 
 module.exports = resolvers;
