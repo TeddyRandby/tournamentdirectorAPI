@@ -11,7 +11,7 @@ module.exports = {
                     data = team;
                 }
             })
-            await Tournament.findOneAndUpdate({teams:teams}, {useFindAndModify:false}).where("teams").elemMatch({ _id: args.team_id}) 
+            await Tournament.where("teams").elemMatch({ _id: args.team_id}).update({teams:teams})
             return data;
         } catch(err) {
             console.log(err);
