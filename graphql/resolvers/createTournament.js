@@ -3,7 +3,7 @@ const Tournament = require("../models/tournament");
 module.exports = {
   createTournament: async args => {
     try {
-      if (!(await Tournament.findOne().where({name: args.name}))){
+      if (!(await Tournament.findOne().where({name: args.tournament.name}))){
       const data = await Tournament.create({
         name: args.tournament.name,
         teams: args.tournament.teams
