@@ -5,6 +5,7 @@ module.exports = {
         try {
             let data = {};
             const {id, teams} = await Tournament.findOne().where("teams").elemMatch({ _id: args.team_id});
+            console.log(args.opp_id);
             teams.forEach( team => {
                 if ( team._id == args.team_id ) {
                     team.opponent = args.opp_id;
