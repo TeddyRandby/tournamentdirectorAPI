@@ -9,6 +9,8 @@ module.exports = {
                 if ( team._id == args.team_id ) {
                     team.opponent = args.opp_id;
                     data = team;
+                } else if (team._id == args.opp_id ) {
+                    team.opponent = args.team_id;
                 }
             })
             await Tournament.where("teams").elemMatch({ _id: args.team_id}).updateOne({teams:teams})
