@@ -10,7 +10,7 @@ module.exports = {
       });
       return data;
     } else {
-      throw Error("Cannot have the same name as another tournament")
+      throw Error("That tournament name is taken")
     }
     } catch (err) {
       console.log(err);
