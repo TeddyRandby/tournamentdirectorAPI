@@ -23,6 +23,7 @@ app.use(
 mongoose
   .connect(mongoURI, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => {
     app.listen(port, () =>
@@ -36,4 +37,3 @@ mongoose
 //   mongoose.set("debug", (collectionName, method, query, doc) => {
 //     console.log(`${collectionName}.${method}`, JSON.stringify(query), doc);
 // });
-
